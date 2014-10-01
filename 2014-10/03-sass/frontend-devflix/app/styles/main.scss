@@ -1,8 +1,10 @@
 @import 'bourbon/dist/bourbon';
+@import 'neat/app/assets/stylesheets/neat';
 
 $rojo: #c02717;
 
 body {
+  @include outer-container;
   font-size: 16px;
 }
 header {
@@ -15,23 +17,14 @@ header {
 }
 nav { display: none; }
 
-button {
-  @include button;
-  width: 100%;
-}
-
 .series {
   overflow: hidden;
   padding: 0 1em;
 }
 .serie {
   float: left;
-  margin-right: 4%;
-  margin-bottom: 20px;
-  width: 48%;
-  &:nth-child(2n) {
-    margin-right: 0;
-  }
+  @include span-columns(6);
+  @include omega(2n);
   img {
     transition: 1s all ease;
     width: 100%;
