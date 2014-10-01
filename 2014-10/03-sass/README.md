@@ -2,3 +2,4 @@
 
 ### Devflix con Sass
 * Scaffold del proyecto
+* Agregar assets
