@@ -4,3 +4,4 @@
 * Scaffold del proyecto
 * Agregar assets
 * Maquetación
+* Agregar estilos con Sass
