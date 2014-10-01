@@ -10,3 +10,4 @@
 * Usar Bourbon
 * Usar Neat
 * Hack Omega-reset
+* Responsive Design y grids con Neat

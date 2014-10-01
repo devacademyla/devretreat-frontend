@@ -1,13 +1,8 @@
 @media screen and (min-width: 640px) {
   .serie {
-    width: 30%;
-    margin-right: 5%;
-    &:nth-child(2n) {
-      margin-right: 5%;
-    }
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    @include span-columns(4);
+    @include omega-reset(2n);
+    @include omega(3n);
   }
 }
 

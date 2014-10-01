@@ -23,7 +23,6 @@ nav { display: none; }
   padding: 0 1em;
 }
 .serie {
-  float: left;
   @include span-columns(6);
   @include omega(2n);
   img {
