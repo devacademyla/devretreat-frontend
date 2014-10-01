@@ -5,3 +5,4 @@
 * Agregar assets
 * Maquetación
 * Agregar estilos con Sass
+* Responsive Mobile First
