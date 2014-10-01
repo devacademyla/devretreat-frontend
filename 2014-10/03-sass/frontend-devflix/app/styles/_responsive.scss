@@ -1,0 +1,28 @@
+@media screen and (min-width: 640px) {
+  .serie {
+    width: 30%;
+    margin-right: 5%;
+    &:nth-child(2n) {
+      margin-right: 5%;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .serie {
+    width: 13%;
+    margin-right: 1.5%;
+    &:nth-child(2n) {
+      margin-right: 1.5%;
+    }
+    &:nth-child(3n) {
+      margin-right: 1.5%;
+    }
+    &:nth-child(7n) {
+      margin-right: 0;
+    }
+  }
+}
