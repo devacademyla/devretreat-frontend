@@ -1,55 +1,95 @@
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>frontend devflix</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
-    <div class="hero-unit">
-      <h1>&apos;Allo, &apos;Allo!</h1>
-      <p>You now have</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Devflix</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles/main.scss" />
+</head>
+<body>
+  <header>
+    <img class="logo" src="images/devflix-logo.png" alt="Devflix" />
+    <nav>
       <ul>
-      <li>HTML5 Boilerplate</li>
-      <li>Sass</li>
-
+        <li><a href="#">Ver ahora</a></li>
+        <li><a href="#">Solo para niños</a></li>
+        <li><a href="#">En Cola</a></li>
+        <li><a href="#">Próximos</a></li>
+        <li><a href="#">DVDs</a></li>
       </ul>
-    </div>
-
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    </nav>
+  </header>
+  <h2>Nuevos Lanzamientos</h2>
+  <section class="series">
+    <article class="serie">
+      <img src="images/bates-motel.jpg" alt="Bates Motel" />
+    </article>
+    <article class="serie">
+      <img src="images/breaking-bad.jpg" alt="Breaking Bad" />
+    </article>
+    <article class="serie">
+      <img src="images/gotham.jpg" alt="Gotham" />
+    </article>
+    <article class="serie">
+      <img src="images/house-of-cards.jpg" alt="House of Cards" />
+    </article>
+    <article class="serie">
+      <img src="images/silicon-valley.jpg" alt="Silicon Valley" />
+    </article>
+    <article class="serie">
+      <img src="images/skins.jpg" alt="Skins" />
+    </article>
+    <article class="serie">
+      <img src="images/smallville.jpg" alt="Smallville" />
+    </article>
+  </section>
+  <h2>Recientemente añadidos</h2>
+  <section class="series">
+    <article class="serie">
+      <img src="images/under-the-dome.jpg" alt="Under the Dome" />
+    </article>
+    <article class="serie">
+      <img src="images/bates-motel.jpg" alt="Bates Motel" />
+    </article>
+    <article class="serie">
+      <img src="images/breaking-bad.jpg" alt="Breaking Bad" />
+    </article>
+    <article class="serie">
+      <img src="images/gotham.jpg" alt="Gotham" />
+    </article>
+    <article class="serie">
+      <img src="images/house-of-cards.jpg" alt="House of Cards" />
+    </article>
+    <article class="serie">
+      <img src="images/silicon-valley.jpg" alt="Silicon Valley" />
+    </article>
+    <article class="serie">
+      <img src="images/skins.jpg" alt="Skins" />
+    </article>
+  </section>
+  <h2>Verlos otra vez</h2>
+  <section class="series">
+    <article class="serie">
+      <img src="images/bates-motel.jpg" alt="Bates Motel" />
+    </article>
+    <article class="serie">
+      <img src="images/breaking-bad.jpg" alt="Breaking Bad" />
+    </article>
+    <article class="serie">
+      <img src="images/gotham.jpg" alt="Gotham" />
+    </article>
+    <article class="serie">
+      <img src="images/house-of-cards.jpg" alt="House of Cards" />
+    </article>
+    <article class="serie">
+      <img src="images/silicon-valley.jpg" alt="Silicon Valley" />
+    </article>
+    <article class="serie">
+      <img src="images/skins.jpg" alt="Skins" />
+    </article>
+    <article class="serie">
+      <img src="images/smallville.jpg" alt="Smallville" />
+    </article>
+  </section>
 </body>
 </html>
