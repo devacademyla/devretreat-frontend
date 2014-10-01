@@ -11,3 +11,4 @@
 * Usar Neat
 * Hack Omega-reset
 * Responsive Design y grids con Neat
+* Instalar Bitters y usar new-breakpoint

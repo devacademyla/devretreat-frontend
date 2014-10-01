@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "~1.11.1",
     "bourbon": "~4.0.2",
-    "neat": "~1.6.0"
+    "neat": "~1.6.0",
+    "bitters": "~0.10.1"
   }
 }
