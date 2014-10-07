@@ -4,3 +4,4 @@
 * Agregar base del proyecto
 * Agregar Angularjs
 * Agregar primer controlador
+* Agregar filtros

@@ -24,8 +24,8 @@
   <section class="series">
     <article class="serie">
       <img src="images/{{srsCtrl.serie.slug}}.jpg" alt="{{srsCtrl.serie.titulo}}" />
-      <h3>{{srsCtrl.serie.titulo}}</h3>
-      <span>{{srsCtrl.serie.tipo.join(', ')}}</span>
+      <h3>{{srsCtrl.serie.titulo | uppercase}}</h3>
+      <span>{{srsCtrl.serie.tipo | limitTo: 1}}</span>
     </article>
   </section>
 </body>
