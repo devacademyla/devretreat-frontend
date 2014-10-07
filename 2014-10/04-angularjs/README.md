@@ -2,3 +2,4 @@
 
 ### Devflix con Angular.js
 * Agregar base del proyecto
+* Agregar Angularjs
