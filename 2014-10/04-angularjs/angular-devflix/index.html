@@ -25,7 +25,7 @@
     <article class="serie">
       <img src="images/{{srsCtrl.serie.slug}}.jpg" alt="{{srsCtrl.serie.titulo}}" />
       <h3>{{srsCtrl.serie.titulo | uppercase}}</h3>
-      <span>{{srsCtrl.serie.tipo | limitTo: 1}}</span>
+      <div class="color-{{tipo | lowercase}}" ng-repeat="tipo in srsCtrl.serie.tipo">{{tipo}}</div>
     </article>
   </section>
 </body>

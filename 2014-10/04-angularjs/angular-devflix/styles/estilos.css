@@ -63,3 +63,30 @@ nav ul li a:hover, .active {
     margin-right: 0;
   }
 }
+
+div {
+  background-color: gray;
+  color: white;
+  float: left;
+  padding: .25em;
+  margin-right: 5px;
+}
+
+.color-drama {
+  background-color: red;
+}
+.color-terror {
+  background-color: black;
+}
+.color-accion {
+  background-color: #000066;
+}
+.color-suspenso {
+  background-color: #4C4C4C;
+}
+.color-comedia {
+  background-color: #33CC33;
+}
+.color-scify {
+  background-color: #CC00FF;
+}

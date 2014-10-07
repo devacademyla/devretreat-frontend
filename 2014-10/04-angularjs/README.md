@@ -5,3 +5,4 @@
 * Agregar Angularjs
 * Agregar primer controlador
 * Agregar filtros
+* Usar ngRepeat y clases dinámicas
