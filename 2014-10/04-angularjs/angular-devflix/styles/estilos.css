@@ -43,6 +43,7 @@ nav ul li a:hover, .active {
 }
 .serie img {
   transition: 1s all ease;
+  margin-top: 10px;
   width: 100%;
 }
 .serie img:hover {
@@ -64,11 +65,13 @@ nav ul li a:hover, .active {
   }
 }
 
-div {
+.badge {
   background-color: gray;
+  border-radius: 5px;
   color: white;
-  float: left;
-  padding: .25em;
+  float: right;
+  font-size: .8em;
+  padding: .1em .3em;
   margin-right: 5px;
 }
 

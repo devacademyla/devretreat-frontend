@@ -22,10 +22,9 @@
   </header>
   <h2>Nuevos Lanzamientos</h2>
   <section class="series">
-    <article class="serie">
-      <img src="images/{{srsCtrl.serie.slug}}.jpg" alt="{{srsCtrl.serie.titulo}}" />
-      <h3>{{srsCtrl.serie.titulo | uppercase}}</h3>
-      <div class="color-{{tipo | lowercase}}" ng-repeat="tipo in srsCtrl.serie.tipo">{{tipo}}</div>
+    <article ng-repeat="serie in srsCtrl.series" class="serie">
+      <img src="images/{{serie.slug}}.jpg" alt="{{serie.titulo}}" />
+      <div class="badge color-{{tipo | lowercase}}" ng-repeat="tipo in serie.tipo">{{tipo}}</div>      
     </article>
   </section>
 </body>

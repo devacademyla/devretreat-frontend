@@ -55,6 +55,13 @@ var seriesLista = [
       enTransmision: true
     },
     {
+      titulo: "The Walking Dead",
+      descripcion: "Protagonizada por Rick Grimes (Andrew Lincoln), un oficial de policía que al despertar de un coma se encuentra con un mundo repleto de zombis salvajes",
+      tipo: ["Drama"],
+      slug: "the-walking-dead",
+      enTransmision: true
+    },
+    {
       titulo: "Under The Dome",
       descripcion: "Todo comienza en Chester's Mill, donde una gran barrera invisible cae y todo el pueblo se queda atrapado.",
       tipo: ["Drama", "Scify"],
@@ -62,3 +69,5 @@ var seriesLista = [
       enTransmision: true
     }
   ];
+
+   
