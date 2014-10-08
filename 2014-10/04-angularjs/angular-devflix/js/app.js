@@ -13,6 +13,12 @@ app.controller('seriesController', function(){
   };
 });
 
+app.directive('nuevosLanzamientos', function(){
+  return {
+    restrict: 'E',
+    template: '<h2>Nuevos Lanzamientos</h2> <section class="series"> <article ng-repeat="serie in srsCtrl.series" class="serie"> <img src="images/{{serie.slug}}.jpg" alt="{{serie.titulo}}" /> <div class="badge color-{{tipo | lowercase}}" ng-repeat="tipo in serie.tipo">{{tipo}}</div> </article> </section>'};
+});
+
 var seriesLista = [
     {
       titulo: "Bates Motel",

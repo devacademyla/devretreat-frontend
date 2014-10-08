@@ -10,3 +10,4 @@
 * Agregar un buscador
 * Sistema de tabs
 * Refactor de sistema de tabs
+* Directiva personalizada
