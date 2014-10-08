@@ -43,7 +43,6 @@ nav ul li a:hover, .active {
 }
 .serie img {
   transition: 1s all ease;
-  margin-top: 10px;
   width: 100%;
 }
 .serie img:hover {

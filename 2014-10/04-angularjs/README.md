@@ -7,3 +7,4 @@
 * Agregar filtros
 * Usar ngRepeat y clases dinámicas
 * Usar ngRepeat con series
+* Agregar un buscador
