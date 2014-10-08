@@ -8,3 +8,4 @@
 * Usar ngRepeat y clases dinámicas
 * Usar ngRepeat con series
 * Agregar un buscador
+* Sistema de tabs

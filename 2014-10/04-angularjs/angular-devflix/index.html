@@ -7,30 +7,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
   <script src="js/app.js"></script>
 </head>
-<body ng-controller="seriesController as srsCtrl">
+<body ng-controller="seriesController as srsCtrl" ng-init="tab = 1">
   <header>
     <img class="logo" src="images/devflix-logo.png" alt="Devflix" />
     <nav>
       <ul>
-        <li><a href="#" class="active">Ver ahora</a></li>
-        <li><a href="#">Buscador</a></li>
+        <li><a href="#" ng-class="{ active : tab == 1}" ng-click="tab = 1">Ver ahora</a></li>
+        <li><a href="#" ng-class="{ active : tab == 2}" ng-click="tab = 2">Buscador</a></li>
       </ul>
     </nav>
   </header>
-  <h2>Nuevos Lanzamientos</h2>
-  <section class="series">
-    <article ng-repeat="serie in srsCtrl.series" class="serie">
-      <img src="images/{{serie.slug}}.jpg" alt="{{serie.titulo}}" />
-      <div class="badge color-{{tipo | lowercase}}" ng-repeat="tipo in serie.tipo">{{tipo}}</div>      
-    </article>
-  </section>
+  <div ng-show="tab == 1">
+    <h2>Nuevos Lanzamientos</h2>
+    <section class="series">
+      <article ng-repeat="serie in srsCtrl.series" class="serie">
+        <img src="images/{{serie.slug}}.jpg" alt="{{serie.titulo}}" />
+        <div class="badge color-{{tipo | lowercase}}" ng-repeat="tipo in serie.tipo">{{tipo}}</div>      
+      </article>
+    </section>
+  </div>
+  <div ng-show="tab == 2">
   <h2>Buscador</h2>
-  <input type="text" ng-model="texto" ng-init="texto = '  '" />
-  <section class="series">
-    <article ng-repeat="serie in srsCtrl.series | filter : texto" class="serie">
-      <img src="images/{{serie.slug}}.jpg" alt="{{serie.titulo}}" />
-      <div class="badge color-{{tipo | lowercase}}" ng-repeat="tipo in serie.tipo">{{tipo}}</div>      
-    </article>
-  </section>
+    <input type="text" ng-model="texto" ng-init="texto = '  '" />
+    <section class="series">
+      <article ng-repeat="serie in srsCtrl.series | filter : texto" class="serie">
+        <img src="images/{{serie.slug}}.jpg" alt="{{serie.titulo}}" />
+        <div class="badge color-{{tipo | lowercase}}" ng-repeat="tipo in serie.tipo">{{tipo}}</div>      
+      </article>
+    </section>
+  </div>
 </body>
 </html>

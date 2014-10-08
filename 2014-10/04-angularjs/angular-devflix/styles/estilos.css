@@ -28,6 +28,9 @@ nav ul li a {
 nav ul li a:hover, .active {
   color: white;
 }
+input {
+  margin-bottom: 20px;
+}
 
 .series {
   overflow: hidden;
