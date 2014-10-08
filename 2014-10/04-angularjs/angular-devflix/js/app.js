@@ -2,6 +2,15 @@ var app = angular.module('devflix', []);
 
 app.controller('seriesController', function(){
   this.series = seriesLista;
+  this.tab = 1;
+
+  this.setTab = function(input){
+    this.tab = input;
+  };
+
+  this.isSet = function(input){
+    return input == this.tab;
+  };
 });
 
 var seriesLista = [
