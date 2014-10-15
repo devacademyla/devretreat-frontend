@@ -1,4 +1,5 @@
 @import 'bourbon/bourbon';
+@import 'neat/neat';
 
 $gris: #d1d1d1;
 body {
@@ -56,26 +57,28 @@ nav {
     }
   }
 }
+div.total {
+  background-color: $gris;
+  overflow: hidden;
+  padding: .5em;
+  margin: 2em 2.5% 0 17.5%;
+  a { float: right; }
+}
 section.productos {
   @extend %left;
   background-color: white;
   box-sizing: border-box;
-  margin: 2em 2.5%;
+  margin: 0 2.5%;
   padding: 1em;
   text-align: center;
   width: 80%;
-  div {
-    background-color: $gris;
-    overflow: hidden;
-    padding: .5em;
-    a { float: right; }
-  }
 }
 article {
   display: inline-block;
   position: relative;
-  margin: 1em .5em;
-  width: 150px;
+  @include span-columns(2);
+  @include omega(6n);
+
   span, button {
     display: block;
     margin: 5px auto;
@@ -92,5 +95,11 @@ article {
     position: absolute;
     right: 0;
     top: 0;
+  }
+}
+@media screen and (max-width: 800px){
+  article {
+    @include span-columns(4);
+    @include omega(3n);
   }
 }
