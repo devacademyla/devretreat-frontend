@@ -1,0 +1,31 @@
+<div ng-controller="productListCtrl"  ng-hide="data.error">
+    <header>
+      <input type="text" ng-model="search" placeholder="Buscar..." />
+    </header>
+    <nav>
+      <img src="assets/images/logo.png" alt="Whole Food" class="logo" />
+      <ul>
+        <li><a ng-click="selectCategory()">Inicio</a></li>
+        <li ng-repeat="item in data.products | orderBy:'category' | unique:'category'"><a ng-click="selectCategory(item)" ng-class="getCategoryClass(item)">{{ item }}</a></li>
+      </ul>
+    </nav>
+    <section class="productos">
+      <div>
+        <a href="#">3 items, <b>$30.00</b></a>
+      </div>
+      <article ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize | filter:search">
+        <img src="assets/images/manzana.jpg" alt="Manzana" />
+        <span>{{ item.price | currency }}</span>
+        <span>{{ item.name }}</span>
+        <span>{{ item.description }}</span>
+        <button>+</button>
+      </article>
+      <div id="paginator">
+        <ul>
+          <li ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize" ng-click="selectPage($index + 1)" class="btn btn-default" ng-class="getPageClass($index + 1)">
+            {{$index + 1}}
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
