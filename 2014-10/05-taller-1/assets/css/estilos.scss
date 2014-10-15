@@ -7,26 +7,21 @@ body {
   margin: 0;
 }
 header {
-  background-color: black;
+  background: rgba(0,0,0,0.35);
   height: 40px;
-  opacity: .7;
-  padding: .5em;
+  padding: .5em 2.5%;
   text-align: center;
-  h3 {
-    color: white;
-    display: inline;
-    font-size: 1.5em;
-    font-weight: normal;
-    line-height: 40px;
-    margin: 0;
-    opacity: 1;
-  }
   input {
+    float: right;
     margin-top: 10px;
     vertical-align: top;
   }
-  &:hover, &:active {
-    opacity: .9;
+  .carrito {
+    float: right;
+    @include button(shiny, green);
+  }
+  &:hover {
+    background: rgba(0,0,0,0.5);
   }
 }
 %left { float: left; }
@@ -35,26 +30,33 @@ nav {
   background-color: black;
   box-sizing: border-box;
   margin-top: 2em;
-  padding: 1em 1em 5em;
+  padding: 1em 0 6em;
   text-align: center;
   width: 15%;
+  img { margin-bottom: .5em; }
   ul {
     font-size: 1.5em;
-    margin: 1em 0 0;
+    margin: 0;
     padding: 0;
     text-align: left;
     li {
-      border-bottom: 3px solid white;
-      margin: .5em 0 0;
-      padding: 0 0 .5em;
+      border-bottom: 1px solid $gris;
+      margin: 0;
+      padding: 0;
       a {
         color: white;
+        display: block;
+        padding: .5em 1em;
         text-decoration: none;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
       }
     }
   }
 }
-section {
+section.productos {
   @extend %left;
   background-color: white;
   box-sizing: border-box;
@@ -62,10 +64,18 @@ section {
   padding: 1em;
   text-align: center;
   width: 80%;
+  div {
+    background-color: $gris;
+    overflow: hidden;
+    padding: .5em;
+    a { float: right; }
+  }
 }
 article {
   display: inline-block;
+  position: relative;
   margin: 1em .5em;
+  width: 150px;
   span, button {
     display: block;
     margin: 5px auto;
@@ -74,11 +84,13 @@ article {
     font-weight: bold;
   }
   img{
-    border: 1px solid $gris;
-    height: 150px;
-    width: 150px;
+    border: 2px solid $gris;
+    width: 100%;
   }
   button {
     @include button;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
