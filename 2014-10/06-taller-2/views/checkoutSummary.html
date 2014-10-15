@@ -1,6 +1,10 @@
-<div id="checkout">
-	<h2>Your cart</h2>
-	<div>
+<div id="checkout" ng-controller="cartSummaryController">
+	<div class="alert" ng-show="cartData.length == 0">
+		There are no products in your shopping cart.
+		<a href="#/products">Click here to return to the catalogue</a>
+	</div>
+	<div ng-hide="cartData.length == 0">
+		<h2>Your cart</h2>
 		<table>
 			<thead>
 				<tr>
@@ -12,20 +16,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1</td>
-					<td>Bananas</td>
-					<td>$2.42</td>
-					<td>$2.42</td>
-					<td>
-						<button class="btn-remove" ng-click="remove(item.id)">Remove</button>
-					</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>Bananas</td>
-					<td>$2.42</td>
-					<td>$2.42</td>
+				<tr ng-repeat="item in cartData">
+					<td>{{item.count}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.price | currency}}</td>
+					<td>{{ (item.price * item.count) | currency}}</td>
 					<td>
 						<button class="btn-remove" ng-click="remove(item.id)">Remove</button>
 					</td>
@@ -34,7 +29,7 @@
 					<td></td>
 					<td></td>
 					<td>Total:</td>
-					<td>$2.42</td>
+					<td>{{total() | currency}}</td>
 					<td></td>
 				</tr>
 			</tbody>
