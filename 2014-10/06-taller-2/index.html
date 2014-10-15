@@ -5,8 +5,20 @@
   <title>Whole Food</title>
   <link rel="stylesheet" href="assets/css/estilos.css" />
   <script src="angular.min.js"></script>
+  <script src="angular-route.js"></script>
   <script>
-      angular.module("fruitsStore", ["customFilters", "cart"]);
+      angular.module("fruitsStore", ["customFilters", "cart", "ngRoute"])
+        .config(function ($routeProvider) {
+          $routeProvider.when("/checkout", {
+            templateUrl: "/views/checkoutSummary.html"
+          });
+          $routeProvider.when("/products", {
+            templateUrl: "/views/productList.html"
+          });
+          $routeProvider.otherwise({
+            templateUrl: "/views/productList.html"
+          });
+        });
   </script>
   <script src="controllers/fruitsStore.js"></script>
   <script src="filters/customFilters.js"></script>
@@ -18,6 +30,6 @@
     Error ({{data.error.status}}). The product data was not loaded.
     <a href="/index.html">Click here to try again</a>
   </div>
-  <ng-include src="'views/productList.html'"></ng-include>
+  <ng-view />
 </body>
 </html>
