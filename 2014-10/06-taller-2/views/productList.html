@@ -16,7 +16,7 @@
         <span>{{ item.price | currency }}</span>
         <span>{{ item.name }}</span>
         <span>{{ item.description }}</span>
-        <button>+</button>
+        <button ng-click="addProductToCart(item)">+</button>
       </article>
       <div id="paginator">
         <ul>
