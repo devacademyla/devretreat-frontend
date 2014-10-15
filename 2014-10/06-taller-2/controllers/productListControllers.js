@@ -1,5 +1,6 @@
 angular.module("fruitsStore")
-	.controller("productListCtrl", function ($scope, $filter) {
+	.constant("productListActiveClass", "btn-active")
+	.controller("productListCtrl", function ($scope, productListActiveClass) {
 		var selectedCategory = null;
 		
 		$scope.selectCategory = function (newCategory) {
@@ -7,8 +8,11 @@ angular.module("fruitsStore")
 		}
 		
 		$scope.categoryFilterFn = function (product) {
-			console.log(product.category);
 			return selectedCategory == null ||
 			product.category == selectedCategory;
+		}
+
+		$scope.getCategoryClass = function (category) {
+			return selectedCategory == category ? productListActiveClass : "";
 		}
 	});

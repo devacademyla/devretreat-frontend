@@ -11,6 +11,11 @@
   <script src="controllers/fruitsStore.js"></script>
   <script src="filters/customFilters.js"></script>
   <script src="controllers/productListControllers.js"></script>
+  <style>
+    .btn-active{
+      background: #006F51;
+    }
+  </style>
 </head>
 <body ng-controller="fruitsStoreCtrl">
   <header>
@@ -21,7 +26,7 @@
       <img src="assets/images/logo.png" alt="Whole Food" class="logo" />
       <ul>
         <li><a ng-click="selectCategory()">Inicio</a></li>
-        <li ng-repeat="item in data.products | orderBy:'category' | unique:'category'"><a ng-click="selectCategory(item)">{{ item }}</a></li>
+        <li ng-repeat="item in data.products | orderBy:'category' | unique:'category'"><a ng-click="selectCategory(item)" ng-class="getCategoryClass(item)">{{ item }}</a></li>
       </ul>
     </nav>
     <section class="productos">
