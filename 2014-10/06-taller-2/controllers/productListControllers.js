@@ -1,0 +1,14 @@
+angular.module("fruitsStore")
+	.controller("productListCtrl", function ($scope, $filter) {
+		var selectedCategory = null;
+		
+		$scope.selectCategory = function (newCategory) {
+			selectedCategory = newCategory;
+		}
+		
+		$scope.categoryFilterFn = function (product) {
+			console.log(product.category);
+			return selectedCategory == null ||
+			product.category == selectedCategory;
+		}
+	});

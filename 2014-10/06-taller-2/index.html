@@ -6,34 +6,36 @@
   <link rel="stylesheet" href="assets/css/estilos.css" />
   <script src="angular.min.js"></script>
   <script>
-      angular.module("fruitsStore", []);
+      angular.module("fruitsStore", ["customFilters"]);
   </script>
   <script src="controllers/fruitsStore.js"></script>
+  <script src="filters/customFilters.js"></script>
+  <script src="controllers/productListControllers.js"></script>
 </head>
 <body ng-controller="fruitsStoreCtrl">
   <header>
     <input type="text" placeholder="Buscar..." />
   </header>
-  <nav>
-    <img src="assets/images/logo.png" alt="Whole Food" class="logo" />
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Cítricos</a></li>
-      <li><a href="#">Exóticos</a></li>
-      <li><a href="#">De grano</a></li>
-    </ul>
-  </nav>
-  <section class="productos">
-    <div>
-      <a href="#">3 items, <b>$30.00</b></a>
-    </div>
-    <article ng-repeat="item in data.products">
-      <img src="assets/images/manzana.jpg" alt="Manzana" />
-      <span>{{ item.price | currency }}</span>
-      <span>{{ item.name }}</span>
-      <span>{{ item.description }}</span>
-      <button>+</button>
-    </article>
-  </section>
+  <div ng-controller="productListCtrl">
+    <nav>
+      <img src="assets/images/logo.png" alt="Whole Food" class="logo" />
+      <ul>
+        <li><a ng-click="selectCategory()">Inicio</a></li>
+        <li ng-repeat="item in data.products | orderBy:'category' | unique:'category'"><a ng-click="selectCategory(item)">{{ item }}</a></li>
+      </ul>
+    </nav>
+    <section class="productos">
+      <div>
+        <a href="#">3 items, <b>$30.00</b></a>
+      </div>
+      <article ng-repeat="item in data.products | filter:categoryFilterFn">
+        <img src="assets/images/manzana.jpg" alt="Manzana" />
+        <span>{{ item.price | currency }}</span>
+        <span>{{ item.name }}</span>
+        <span>{{ item.description }}</span>
+        <button>+</button>
+      </article>
+    </section>
+  </div>
 </body>
 </html>
