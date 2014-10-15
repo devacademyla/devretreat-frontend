@@ -7,6 +7,19 @@ body {
   font-size: 16px;
   margin: 0;
 }
+.alert{
+  background: #F7D5D5;
+  color: #f00;
+  border-radius: 12px;
+  width: 80%;
+  padding: 12px;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px auto;
+  a{
+    color: #fff;
+  }
+}
 header {
   background: rgba(0,0,0,0.35);
   height: 40px;

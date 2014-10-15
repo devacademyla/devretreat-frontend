@@ -13,10 +13,14 @@
   <script src="controllers/productListControllers.js"></script>
 </head>
 <body ng-controller="fruitsStoreCtrl">
-  <header>
-    <input type="text" ng-model="search" placeholder="Buscar..." />
-  </header>
-  <div ng-controller="productListCtrl">
+  <div class="alert" ng-show="data.error">
+    Error ({{data.error.status}}). The product data was not loaded.
+    <a href="/index.html">Click here to try again</a>
+  </div>
+  <div ng-controller="productListCtrl"  ng-hide="data.error">
+    <header>
+      <input type="text" ng-model="search" placeholder="Buscar..." />
+    </header>
     <nav>
       <img src="assets/images/logo.png" alt="Whole Food" class="logo" />
       <ul>
