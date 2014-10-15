@@ -1,0 +1,96 @@
+@import 'bourbon/bourbon';
+
+$gris: #d1d1d1;
+body {
+  background-image: url('../images/background.jpg');
+  font-size: 16px;
+  margin: 0;
+}
+header {
+  background: rgba(0,0,0,0.35);
+  height: 40px;
+  padding: .5em 2.5%;
+  text-align: center;
+  input {
+    float: right;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+  .carrito {
+    float: right;
+    @include button(shiny, green);
+  }
+  &:hover {
+    background: rgba(0,0,0,0.5);
+  }
+}
+%left { float: left; }
+nav {
+  @extend %left;
+  background-color: black;
+  box-sizing: border-box;
+  margin-top: 2em;
+  padding: 1em 0 6em;
+  text-align: center;
+  width: 15%;
+  img { margin-bottom: .5em; }
+  ul {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    li {
+      border-bottom: 1px solid $gris;
+      margin: 0;
+      padding: 0;
+      a {
+        color: white;
+        display: block;
+        padding: .5em 1em;
+        text-decoration: none;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+  }
+}
+section.productos {
+  @extend %left;
+  background-color: white;
+  box-sizing: border-box;
+  margin: 2em 2.5%;
+  padding: 1em;
+  text-align: center;
+  width: 80%;
+  div {
+    background-color: $gris;
+    overflow: hidden;
+    padding: .5em;
+    a { float: right; }
+  }
+}
+article {
+  display: inline-block;
+  position: relative;
+  margin: 1em .5em;
+  width: 150px;
+  span, button {
+    display: block;
+    margin: 5px auto;
+  }
+  span {
+    font-weight: bold;
+  }
+  img{
+    border: 2px solid $gris;
+    width: 100%;
+  }
+  button {
+    @include button;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
