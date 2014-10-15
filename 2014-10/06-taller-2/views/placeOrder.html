@@ -1,18 +1,33 @@
+<style>
+	form .ng-invalid { background-color: lightpink; }
+	form .ng-valid { background-color: lightgreen; }
+	/*form .ng-invalid.ng-dirty { background-color: lightpink; }
+	form .ng-valid.ng-dirty { background-color: lightgreen; }*/
+	span.error { color: red; font-weight: bold; }
+</style>
 <div id="order">
 	<h2>Check out now</h2>
 	<p>Please enter your details, and we'll ship your goods right away!</p>
-	<h3>Ship to:</h3>
-	<table>
-		<tr>
-			<td><label>Name</label></td>
-			<td><input ng-model="data.shipping.name" /></td>
-		</tr>
-		<tr>
-			<td><label>Street Address</label></td>
-			<td><input ng-model="data.shipping.street" /></td>
-		</tr>
-		<tr>
-			<td><button>Complete order</button></td>
-		</tr>
-	</table>
+	<form name="shippingForm" novalidate>
+		<h3>Ship to:</h3>
+		<table>
+			<tr>
+				<td><label>Name</label></td>
+				<td><input name="name" ng-model="data.shipping.name" required /></td>
+				<td>
+					<span class="error" ng-show="shippingForm.name.$error.required">Please enter a name</span>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Street Address</label></td>
+				<td><input name="street" ng-model="data.shipping.street" required /></td>
+				<td>
+					<span class="error" ng-show="shippingForm.street.$error.required">Please enter a street address</span>
+				</td>
+			</tr>
+			<tr>
+				<td><button ng-disabled="shippingForm.$invalid">Complete order</button></td>
+			</tr>
+		</table>
+	</form>
 </div>
