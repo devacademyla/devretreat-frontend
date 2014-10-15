@@ -14,7 +14,7 @@
 </head>
 <body ng-controller="fruitsStoreCtrl">
   <header>
-    <input type="text" placeholder="Buscar..." />
+    <input type="text" ng-model="search" placeholder="Buscar..." />
   </header>
   <div ng-controller="productListCtrl">
     <nav>
@@ -28,7 +28,7 @@
       <div>
         <a href="#">3 items, <b>$30.00</b></a>
       </div>
-      <article ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
+      <article ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize | filter:search">
         <img src="assets/images/manzana.jpg" alt="Manzana" />
         <span>{{ item.price | currency }}</span>
         <span>{{ item.name }}</span>
