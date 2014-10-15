@@ -141,3 +141,48 @@ article {
     }
   } 
 }
+
+#checkout{
+  background: #fff;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 15px;
+  padding: 20px;
+
+  h2{
+    text-align: center;
+  }
+
+  table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin-bottom: 20px;
+    font-size: 16px;
+    thead th {background-color:$verdeoscuro; color:#FFFFFF; font-weight: bold; border-left: 1px solid #0070A8;
+      &:first-child { border: none; } } 
+    tbody{
+      tr:nth-child(even){
+        background: #E1EEF4;
+      }
+      td { 
+        color: #00496B; 
+        border-left: 1px solid #E1EEF4;
+        text-align: center;
+        &:first-child { 
+          border-left: none; 
+        }
+        .btn-remove{
+          @include button(red);
+          font-size: 14px;
+        }
+      }
+      tr:last-child td { border-bottom: none; font-weight: bold; background: #fff; }
+    }
+    td { padding: 3px 10px; }
+    th { padding: 3px 10px; }
+  } 
+
+  .btn{
+    @include button;
+  }
+}

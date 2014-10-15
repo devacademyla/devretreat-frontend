@@ -1,1 +1,48 @@
-<a href="#/products" class="btn-back">Back</a>
+<div id="checkout">
+	<h2>Your cart</h2>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Quantity</th>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Subtotal</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Bananas</td>
+					<td>$2.42</td>
+					<td>$2.42</td>
+					<td>
+						<button class="btn-remove" ng-click="remove(item.id)">Remove</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Bananas</td>
+					<td>$2.42</td>
+					<td>$2.42</td>
+					<td>
+						<button class="btn-remove" ng-click="remove(item.id)">Remove</button>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Total:</td>
+					<td>$2.42</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<a class="btn" href="#/products">Continue shopping</a>
+			<a class="btn" href="#/placeorder">Place order now</a>
+			<a href="#/products" class="btn">Back</a>
+		</div>
+	</div>
+</div>
