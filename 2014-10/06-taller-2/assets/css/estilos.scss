@@ -112,6 +112,10 @@ article {
   }
 }
 
+.btn-checkout{
+  @include button;
+}
+
 #paginator{
   background: #fff;
   ul{

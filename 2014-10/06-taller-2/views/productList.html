@@ -10,9 +10,7 @@
       </ul>
     </nav>
     <section class="productos">
-      <div>
-        <a href="#">3 items, <b>$30.00</b></a>
-      </div>
+      <cart-summary></cart-summary>
       <article ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize | filter:search">
         <img src="assets/images/manzana.jpg" alt="Manzana" />
         <span>{{ item.price | currency }}</span>

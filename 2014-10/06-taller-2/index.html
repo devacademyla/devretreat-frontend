@@ -6,11 +6,12 @@
   <link rel="stylesheet" href="assets/css/estilos.css" />
   <script src="angular.min.js"></script>
   <script>
-      angular.module("fruitsStore", ["customFilters"]);
+      angular.module("fruitsStore", ["customFilters", "cart"]);
   </script>
   <script src="controllers/fruitsStore.js"></script>
   <script src="filters/customFilters.js"></script>
   <script src="controllers/productListControllers.js"></script>
+  <script src="components/cart/cart.js"></script>
 </head>
 <body ng-controller="fruitsStoreCtrl">
   <div class="alert" ng-show="data.error">
