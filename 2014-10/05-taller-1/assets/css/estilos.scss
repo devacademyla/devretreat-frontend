@@ -1,68 +1,79 @@
+$gris: #d1d1d1;
 body {
-  background-image: url("../images/background.jpg");
+  background-image: url('../images/background.jpg');
   font-size: 16px;
-  margin: 0; }
-
+  margin: 0;
+}
 header {
   background-color: black;
   height: 40px;
   opacity: .7;
   padding: .5em;
-  text-align: center; }
-  header h3 {
+  text-align: center;
+  h3 {
     color: white;
     display: inline;
     font-size: 1.5em;
     font-weight: normal;
     line-height: 40px;
     margin: 0;
-    opacity: 1; }
-  header input {
+    opacity: 1;
+  }
+  input {
     margin-top: 10px;
-    vertical-align: top; }
-  header:hover, header:active {
-    opacity: .9; }
-
-nav, section {
-  float: left; }
-
+    vertical-align: top;
+  }
+  &:hover, &:active {
+    opacity: .9;
+  }
+}
+%left { float: left; }
 nav {
+  @extend %left;
   background-color: black;
   box-sizing: border-box;
   margin-top: 2em;
   padding: 1em 1em 5em;
   text-align: center;
-  width: 15%; }
-  nav ul {
+  width: 15%;
+  ul {
     font-size: 1.5em;
     margin: 1em 0 0;
     padding: 0;
-    text-align: left; }
-    nav ul li {
+    text-align: left;
+    li {
       border-bottom: 3px solid white;
       margin: .5em 0 0;
-      padding: 0 0 .5em; }
-      nav ul li a {
+      padding: 0 0 .5em;
+      a {
         color: white;
-        text-decoration: none; }
-
+        text-decoration: none;
+      }
+    }
+  }
+}
 section {
+  @extend %left;
   background-color: white;
   box-sizing: border-box;
   margin: 2em 2.5%;
   padding: 1em;
   text-align: center;
-  width: 80%; }
-
+  width: 80%;
+}
 article {
   display: inline-block;
-  margin: 1em .5em; }
-  article span, article button {
+  margin: 1em .5em;
+  span, button {
     display: block;
-    margin: 5px auto; }
-  article span {
-    font-weight: bold; }
-  article img {
-    border: 1px solid #d1d1d1;
+    margin: 5px auto;
+  }
+  span {
+    font-weight: bold;
+  }
+  img{
+    border: 1px solid $gris;
     height: 150px;
-    width: 150px; }
+    width: 150px;
+  }
+}
