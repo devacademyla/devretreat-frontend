@@ -11,11 +11,6 @@
   <script src="controllers/fruitsStore.js"></script>
   <script src="filters/customFilters.js"></script>
   <script src="controllers/productListControllers.js"></script>
-  <style>
-    .btn-active{
-      background: #006F51;
-    }
-  </style>
 </head>
 <body ng-controller="fruitsStoreCtrl">
   <header>
@@ -33,13 +28,20 @@
       <div>
         <a href="#">3 items, <b>$30.00</b></a>
       </div>
-      <article ng-repeat="item in data.products | filter:categoryFilterFn">
+      <article ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
         <img src="assets/images/manzana.jpg" alt="Manzana" />
         <span>{{ item.price | currency }}</span>
         <span>{{ item.name }}</span>
         <span>{{ item.description }}</span>
         <button>+</button>
       </article>
+      <div id="paginator">
+        <ul>
+          <li ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize" ng-click="selectPage($index + 1)" class="btn btn-default" ng-class="getPageClass($index + 1)">
+            {{$index + 1}}
+          </li>
+        </ul>
+      </div>
     </section>
   </div>
 </body>

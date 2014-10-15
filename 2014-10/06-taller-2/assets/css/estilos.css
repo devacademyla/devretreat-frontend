@@ -52,6 +52,8 @@ nav {
   padding: 1em 0 6em;
   text-align: center;
   width: 15%; }
+  nav .btn-active {
+    background: #006F51; }
   nav img {
     margin-bottom: .5em; }
   nav ul {
@@ -129,3 +131,25 @@ article {
     article button:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
+
+#paginator {
+  background: #fff; }
+  #paginator ul {
+    display: inline-block;
+    padding-left: 0px; }
+    #paginator ul li {
+      display: inline-block;
+      padding: 6px 10px;
+      cursor: pointer;
+      background: #d1d1d1; }
+      #paginator ul li.btn-active {
+        color: #fff;
+        background: #006F51; }
+      #paginator ul li:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px; }
+      #paginator ul li:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px; }
+
+/*# sourceMappingURL=estilos.css.map */

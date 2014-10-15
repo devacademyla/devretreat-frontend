@@ -1,6 +1,7 @@
 @import 'bourbon/bourbon';
 
 $gris: #d1d1d1;
+$verdeoscuro: #006F51;
 body {
   background-image: url('../images/background.jpg');
   font-size: 16px;
@@ -33,6 +34,9 @@ nav {
   padding: 1em 0 6em;
   text-align: center;
   width: 15%;
+  .btn-active{
+    background: $verdeoscuro;
+  }
   img { margin-bottom: .5em; }
   ul {
     font-size: 1.5em;
@@ -93,4 +97,30 @@ article {
     right: 0;
     top: 0;
   }
+}
+
+#paginator{
+  background: #fff;
+  ul{
+    display: inline-block;
+    padding-left: 0px;
+    li{
+      display: inline-block;
+      padding: 6px 10px;
+      cursor: pointer;
+      background: $gris;
+      &.btn-active{
+        color: #fff;
+        background: $verdeoscuro;
+      }
+      &:first-child{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      &:last-child{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  } 
 }
