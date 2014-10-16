@@ -1,0 +1,13 @@
+<style>
+	div{ height: 37px; }
+	.text-right{ float: right; margin-right: 5px;}
+	.text-right a{ margin-left:  10px; position: relative; top: -7px;}
+</style>
+<div>
+	<div class="text-right">
+		<b>Your cart:</b>
+		{{itemCount()}} item(s),
+		{{total() | currency}}
+		<a href="#/checkout" class="btn-checkout">Checkout</a>
+	</div>
+</div>

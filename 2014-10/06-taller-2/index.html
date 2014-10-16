@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="fruitsStore">
+<head>
+  <meta charset="UTF-8" />
+  <title>Whole Food</title>
+  <link rel="stylesheet" href="assets/css/estilos.css" />
+  <script src="angular.min.js"></script>
+  <script src="angular-route.js"></script>
+  <script>
+      angular.module("fruitsStore", ["customFilters", "cart", "ngRoute"])
+        .config(function ($routeProvider) {
+          $routeProvider.when("/complete", {
+            templateUrl: "/views/thankYou.html"
+          });
+          $routeProvider.when("/placeorder", {
+            templateUrl: "/views/placeOrder.html"
+          });
+          $routeProvider.when("/checkout", {
+            templateUrl: "/views/checkoutSummary.html"
+          });
+          $routeProvider.when("/products", {
+            templateUrl: "/views/productList.html"
+          });
+          $routeProvider.otherwise({
+            templateUrl: "/views/productList.html"
+          });
+        });
+  </script>
+  <script src="controllers/fruitsStore.js"></script>
+  <script src="filters/customFilters.js"></script>
+  <script src="controllers/productListControllers.js"></script>
+  <script src="components/cart/cart.js"></script>
+  <script src="controllers/checkoutControllers.js"></script>
+</head>
+<body ng-controller="fruitsStoreCtrl">
+  <div class="alert" ng-show="data.error">
+    Error ({{data.error.status}}). The product data was not loaded.
+    <a href="/index.html">Click here to try again</a>
+  </div>
+  <ng-view />
+</body>
+</html>
